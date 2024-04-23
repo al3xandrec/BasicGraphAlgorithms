@@ -3,9 +3,16 @@
 #include <iostream>
 #include <iomanip>
 #include <string> 
+
+#include "libs/Graphs.h"
+
 #define INF 10000000
 
 using namespace std;
+
+
+
+
 
 const char separator    = ' ';
 const int numWidth      = 15;
@@ -78,6 +85,21 @@ void MSTPrim(int r) {
 
 int main() {
     MSTPrim(0);
+    
+    SimpleGraph graphG;
+    graphG.InitGraph(N);
+    for (int i = 0; i < N; i++) {
+    	for (int j = 0; j < N; j++) {
+    		graphG.AddEdge(i,j, M[i][j]);
+    	}
+    }
+    
+    for (int i = 0; i < N; i++) {
+    	for (int j = 0; j < N; j++) {
+    		cout << graphG.GetEdgeWeight(i,j) << " ";
+    	}
+    	cout << endl;
+    }
     
     printElement("Elemento");
     printElement("Predecessor");
