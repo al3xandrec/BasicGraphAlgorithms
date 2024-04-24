@@ -59,3 +59,88 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+
+/*
+#include <iostream>
+
+using namespace std;
+
+// Graph
+const int N = 4;
+int M[N][N];
+
+// SETS
+class Set {
+    private:
+    // 0 if not in same set; 1 otherwise;
+    int setMatrix[N][N];
+    
+    public:
+    // Init, 1 if i = j
+    void InitSet(void) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (i == j) setMatrix[i][j] = 1;
+                else setMatrix[i][j] = 0;
+            }
+        }
+    }
+    
+    // check if i and j are in same component
+    bool FindSet(int i, int j) {
+        if (setMatrix[i][j] == 1) return true;
+        return false;
+    }
+    
+    void Union(int i, int j) {
+        for (int i_a = 0; i_a < N; i_a++) {
+            for (int j_a = 0; j_a < N; j_a++) {
+                if (setMatrix[i][i_a] == 1 & setMatrix[j][j_a] == 1) {
+                    setMatrix[i_a][j_a] = 1;
+                    setMatrix[j_a][i_a] = 1;
+                }
+            }
+        }
+    }
+    
+    void GetSetMatrix(void) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                cout << setMatrix[i][j] << " ";
+            }
+            cout << endl;
+        }
+        
+        cout << endl;
+    }
+};
+
+
+
+int main() {
+    Set conj;
+    
+    conj.InitSet();
+    conj.GetSetMatrix();
+    
+    conj.Union(0, 1);
+    conj.GetSetMatrix();
+    
+    conj.Union(2, 3);
+    conj.GetSetMatrix();
+    
+    cout << conj.FindSet(0,1) << endl << endl;
+    
+    
+    conj.Union(2, 1);
+    conj.GetSetMatrix();
+
+    return 0;
+}
+
+*/
