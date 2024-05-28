@@ -1,14 +1,17 @@
 #from BFS import BFS
-from FordFulkerson import FordFulkerson
+#from FordFulkerson import FordFulkerson
+from DFS import DFS
 from ReadTxt import *
 
 
 def main():
-    n, adjMatrix = FFReadTxt()
-    flowMatrix = FordFulkerson(n, adjMatrix, 0, 3)
-    for i in range(n):
-        for j in range(n):
-            print(f"{flowMatrix[i][j]:8.2f}", end=" ")
-        print("")
+    n, adjMatrix = UnweightedReadTxt()
+
+    d, f, pi = DFS(n, adjMatrix)
+
+
+    print(d)
+    print(f)
+    print(pi)
 
 main()

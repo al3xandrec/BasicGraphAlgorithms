@@ -13,8 +13,8 @@
 #    return n, adjMatrix, weights
 
 
-def BFSReadTxt():
-    filename = "input_txts/BFS_adjMatrix.txt"
+def UnweightedReadTxt():
+    filename = "input_txts/UnweightedReadTxt.txt"
     adjMatrix = []
     with open(filename, 'r') as file:
         lines = file.readlines()

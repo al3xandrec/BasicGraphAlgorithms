@@ -18,9 +18,9 @@ def EvaluateResidualNetwork(n, adjMatrix, flowMatrix):
     return residualNetwork
 
 def FindSTPath(n, network, s, t):
-    color, d, pi = BFS(n, network, s)
+    d, pi = BFS(n, network, s)
 
-    if color[t] == "WHITE":
+    if pi[t] == -1:
         return -1
     else:
         pathBackwards = []

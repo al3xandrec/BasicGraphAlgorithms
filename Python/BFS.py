@@ -18,4 +18,4 @@ def BFS(n, network, s):
                 d[v] = d[u]+1
                 pi[v] = u
                 Q.append(v)
-    return color, d, pi
+    return d, pi
