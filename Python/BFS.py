@@ -1,5 +1,6 @@
 from definitions import INFINITY
 
+
 def BFS(n, network, s):
     color = ["WHITE"]*n
     d = [INFINITY]*n
