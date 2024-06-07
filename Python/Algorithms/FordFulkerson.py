@@ -1,4 +1,4 @@
-from BFS import BFS
+from Algorithms.BFS import BFS
 INFINITY = 1000000
 
 def Soma(a,b):

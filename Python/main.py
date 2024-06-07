@@ -1,27 +1,26 @@
-#from FordFulkerson import FordFulkerson
-#from BFS import BFS
-#from DFS import DFS
-from PlotGraph import *
+#from Algorithms.FordFulkerson import FordFulkerson
+#from Algorithms.BFS import BFS
+#from Algorithms.DFS import DFS
+#from Plot.PlotGraph import *
+from Graph.Graph import *
 from ReadTxt import *
 
 
 def main():
-    n, adjMatrix = UnweightedReadTxt()
-
-    #d, pi = BFS(n, adjMatrix, 0)
-
-    n = 3
+    #n, adjMatrix = UnweightedReadTxt()
+    
     adjMatrix = [
-        [0, 1, 2],
-        [1, 0, 3],
-        [2, 3, 0]
+        [0, 1, 0],
+        [1, 0, 1],
+        [0, 1, 0]
     ]
+    n = len(adjMatrix)
 
+    D = Digraph(adjMatrix)
+    
+    D.PrintVertices()
+    D.PrintEdges()
 
-    #print(d)
-    #print(f)
-    #print(pi)
-
-    PlotGraph(n, adjMatrix)
+    #PlotGraph(n, adjMatrix)
 
 main()
